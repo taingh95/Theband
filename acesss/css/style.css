@@ -1,0 +1,90 @@
+/* Reset Css */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Verdana, sans-serif;
+  font-size: 15px;
+}
+
+/* 
+Những câu hỏi nên đặt ra trước khi bắt đầu một website
+
+1. Vị trí
+2. Kích thước
+3. Màu sắc
+4. Kiểu dáng (kiểu chữ, hình tròn, vuông....)
+
+*/
+
+#main {
+}
+
+#header {
+  height: 46px;
+  background-color: #000;
+}
+
+#nav {
+  position: relative;
+  list-style-type: none;
+}
+
+#nav li {
+  display: inline-block;
+}
+
+#nav > li > a {
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  line-height: 46px;
+  padding: 0 24px;
+  display: block;
+}
+
+#nav > li:hover > a,
+#nav .sub-nav li:hover a {
+  color: #000 !important;
+  background-color: #ccc !important;
+}
+
+#nav li:hover .sub-nav {
+    display: block;
+}
+
+#nav li .sub-nav {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  list-style-type: none;
+  min-width: 160px;
+  z-index: 1;
+  top: 100%;
+  left: 100;
+  box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 19%);
+}
+
+#nav .sub-nav li {
+  display: block;
+}
+
+#nav .sub-nav li a {
+  color: #000;
+  display: block;
+  line-height: 38px;
+  padding: 0 16px;
+  text-decoration: none;
+}
+
+#slider {
+  background-color: rgba(161, 94, 94, 0.932);
+  height: 100vh;
+}
+#container {
+}
+#footer {
+}
