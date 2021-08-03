@@ -20,12 +20,74 @@ Những câu hỏi nên đặt ra trước khi bắt đầu một website
 
 */
 
+/* Common */
+
+.clear {
+  clear: both;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.mt-8 {
+  margin-top: 8px;
+}
+
+.mt-16 {
+  margin-top: 16px;
+}
+
+.mt-47 {
+  margin-top: 47px;
+}
+
+.row {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.row::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.col {
+  padding-left: 8px;
+  padding-right: 8px;
+  float: left;
+}
+
+.col-full {
+  width: 100%;
+}
+
+.col-half {
+  width: 50%;
+}
+
+.col-third {
+  width: 33.333%;
+}
+
+/* Main */
+
 #main {
 }
 
 #header {
+  width: 100%;
   height: 46px;
   background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 #nav {
@@ -53,7 +115,7 @@ Những câu hỏi nên đặt ra trước khi bắt đầu một website
 }
 
 #nav li:hover .sub-nav {
-    display: block;
+  display: block;
 }
 
 #nav li .sub-nav {
@@ -80,11 +142,360 @@ Những câu hỏi nên đặt ra trước khi bắt đầu một website
   text-decoration: none;
 }
 
+#search {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#search .btn-search {
+  border: none;
+  cursor: pointer;
+}
+
+#search .btn-search i {
+  padding: 12px 24px;
+  font-size: 15px;
+  line-height: 22.5px;
+  background-color: #000;
+  color: #fff;
+}
+
+#search .btn-search:hover i {
+  color: #fff !important;
+  background-color: #f44336 !important;
+}
+
 #slider {
-  background-color: rgba(161, 94, 94, 0.932);
-  height: 100vh;
+  position: relative;
+  margin-top: 46px;
+  padding-top: 50%;
+  background: url("/The-band/acesss/img/slider/chicago.jpeg") top center / cover
+    no-repeat;
 }
-#container {
+
+#slider .text-content {
+  position: absolute;
+  bottom: 47px;
+  width: 100%;
+  /* left: 50%;
+  transform: translateX(-50%); */
+  text-align: center;
 }
+
+#slider .text-content .text-heading {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+#slider .text-content .text-description {
+  margin-top: 25px;
+  font-size: 15px;
+}
+
+#content {
+}
+
+#content .content-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 64px 0;
+}
+
+#content .content-section .section-heading {
+  font-size: 30px;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 4px;
+}
+
+#content .content-section .section-sub-heading {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 15px;
+  font-style: italic;
+  opacity: 0.6;
+}
+
+#content .content-section .about-text {
+  margin-top: 25px;
+  font-size: 15px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+#content .content-section .member-name {
+  font-size: 15px;
+  margin: 15px 0;
+}
+
+#content .content-section .member-img {
+  max-width: 150px;
+  border-radius: 4px;
+}
+
+/* Tour section */
+.tour-section {
+  background-color: #000;
+}
+
+.tickets {
+  background-color: #fff;
+  margin-top: 33px;
+  list-style-type: none;
+}
+
+.tickets li {
+  padding: 8px 16px;
+  border-bottom: 1px solid #ddd;
+  color: #757575;
+}
+
+.tickets li .sold-out {
+  margin-left: 16px;
+  background-color: #f44336;
+  padding: 3px 4px;
+}
+
+.tickets li .quantity {
+  float: right;
+  width: 24px;
+  height: 24px;
+  background-color: #000;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 24px;
+  margin-top: -2px;
+}
+
+/* Places */
+.place-img {
+  width: 100%;
+  display: block;
+}
+.place-body {
+  background-color: #fff;
+  padding: 16px;
+}
+.place-heading {
+  font-size: 15px;
+  font-weight: 500;
+}
+.place-time {
+  color: #ccc;
+  margin-top: 15px;
+}
+.place-disc {
+  line-height: 1.4;
+  margin-top: 15px;
+}
+.place-buy-ticket-btn {
+  padding: 10px 16px;
+  background-color: #000;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.place-buy-ticket-btn:hover {
+  background-color: #ccc;
+  color: #000 !important;
+}
+
+/* Contact */
+.contact-info > p {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.contact-info > p > i {
+  width: 30px;
+}
+
+.form-control {
+  width: 100%;  
+  border: 1px solid #ccc;
+  padding: 12px;
+}
+
+.form-submit-btn {
+  padding: 8px 12px;
+  background-color: #212121;
+  text-transform: uppercase;
+  border: 1px solid #212121;
+  cursor: pointer;
+  float: right;
+  margin-right: 8px;
+
+}
+
+.form-submit-btn:hover {
+  opacity: .9;
+}
+
+/* Map section */
+.map-section img {
+  width: 100%;
+}
+
+/* Footer */
 #footer {
+  padding: 64px 16px;
+}
+
+.social-list a {
+  text-decoration: none;
+  color:rgba(0, 0, 0, 0.6);
+}
+
+.social-list a:hover {
+  color:rgba(0, 0, 0, 0.8);
+}
+
+.social-list a i{
+  font-size: 24px;
+}
+
+.footer-sign p {
+  font-size: 13px;
+  color:rgba(0, 0, 0, 0.6);
+}
+
+.footer-sign p a {
+  color:rgba(0, 0, 0, 0.6);
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.open {
+  display: flex !important;
+}
+
+.close-modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.close-modal:hover {
+  background-color: #212121;
+  transition-duration: 200ms;
+}
+
+.close-modal > i {
+  color: white;
+  font-size: 15px;
+  padding: 16px;
+}
+
+.modal-container {
+  width: 900px;
+  min-height: 470px;
+  background-color: white;
+  position: relative;
+}
+
+.modal-header {
+  width: 100%;
+  background-color: #484848;
+  padding: 32px 16px;
+  color: white;
+  font-size: 27px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.modal-body {
+  padding: 16px;
+}
+
+.modal-label {
+  display: block;
+  margin-bottom: 16px;
+  color: #212121;
+}
+
+.modal-label > i {
+  margin-right: 12px;
+  color: #212121;
+}
+
+.modal-input {
+  padding: 16px;
+  display: block;
+  width: 100%;
+  border: 1px solid #484848;
+  border-radius: 4px;
+  margin-bottom: 32px;
+}
+
+#payment-button {
+  width: 100%;
+  display: block;
+  padding: 16px;
+  background-color: #484848;
+  border: none;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+#payment-button:hover {
+  background-color: #212121;
+  transition-duration: 200ms;
+}
+
+#payment-button > i {
+  margin-right: 16px;
+}
+
+.modal-footer {
+  margin-bottom: 16px;
+}
+
+.modal-footer p {
+  padding: 16px;
+  text-align: right;
+}
+
+.modal-footer p a {
+  color: #2196f3 !important;
+}
+
+/* Key frames */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-1000px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes modalFadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(1000px);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(0);
+  }
 }
